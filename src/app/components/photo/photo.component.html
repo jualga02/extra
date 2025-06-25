@@ -1,0 +1,21 @@
+
+<!--PHOTO-->
+<div class="container-view-three">
+    <div class="photos-view-three">
+        <div [ngStyle]="{'display': imgsVisible}">
+            <img (click)="onClickImg(sprite1)" src={{sprite1}}
+                style="width: 24%;">
+            <img src={{sprite2}}
+                style="width: 24%;">
+            <img src={{sprite3}}
+                style="width: 24%;">
+            <img src={{sprite4}}
+                style="width: 24%;">
+        </div>
+        <div>
+            <img src={{imgSprite}}
+                style="width: 100%;">
+            <h1>Texto</h1>
+        </div>
+    </div>
+</div>

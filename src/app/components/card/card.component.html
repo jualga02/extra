@@ -1,0 +1,14 @@
+
+<!-- CARD -->
+<div   (click)="onClickModal()" class="card">
+    <div class="footer">
+        <div class="titles">
+            <h2 class='card-title'>{{name}}</h2>
+            <h3>{{dimension}}</h3>
+        </div>
+    </div>
+</div>
+ <!-- '@if' Mejora algunos puntos pero falla en otros en el funcionamiento general-->
+  @if(modalActive){
+    <app-modal [modalActive]="modalActive" (modalActiveOff)="onClickModalOff($event)" [characters]="characters"></app-modal>
+  }

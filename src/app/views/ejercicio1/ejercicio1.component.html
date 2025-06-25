@@ -1,0 +1,25 @@
+
+<!-- EJERCICIO 1  -->
+    <div id="page">
+        <section>
+            <div  class="content">
+              @for(location of locArray; track location){
+                <!-- CARD -->
+                <app-card  
+                          [name]="location.name" 
+                          [dimension]="location.dimension"
+                          [residents]="location.residents">
+                          
+                </app-card>
+            
+                <!-- MODAL -->
+                
+              }
+            </div>
+        </section>
+        <div id='render-more'>
+            <button [ngStyle]="{'display': viewButtonAnt }" (click)="onClickPrevPage()" >ANTERIOR</button>
+            <button [ngStyle]="{'display': viewButtonNext}" (click)="onClickNextPage()" >SIGUIENTE</button>
+        </div>
+    </div>
+

@@ -1,0 +1,23 @@
+
+<!-- MODAL -->
+<!--<div class="modal show-modal">-->
+  <div [style.z-index]="1000" [ngClass]="modalActive? 'modal show-modal' : 'modal'" >
+    <div class="modal-content">
+        <span (click)="onClickModalOff()" class="close-button">×</span>
+        <div class="container">
+            <div class="card">
+                <div class="card-header">
+                    <img [src]= 'imagen'
+                        alt="" />
+                </div>
+                <div class="card-body">
+                    <span class="tag">{{nombre}}</span>
+                </div>
+                <div id='render-more'>
+                    <button  (click)="onClickPrevPage()" >ANTERIOR</button>
+                    <button  (click)="onClickNextPage()" >SIGUIENTE</button>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
