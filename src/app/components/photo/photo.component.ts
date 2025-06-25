@@ -15,11 +15,22 @@ export class PhotoComponent {
   @Input() sprite4:string = '';
   public imgsVisible:string = 'inline';
   public imgSprite:string ='';
+  public viewBigPhoto:string = 'none';
 
-  public onClickImg(sImg:string):void {
+  public onClickImg( nSprite:number):void {
     this.imgsVisible = 'none';
-    this.imgSprite = sImg;
+    switch(nSprite){
+      case 1: this.imgSprite = this.sprite1;break;
+      case 2: this.imgSprite = this.sprite2; break;
+      case 3: this.imgSprite = this.sprite3; break;
+      case 4: this.imgSprite = this.sprite4; break;
+      default: this.imgSprite = this.sprite1;break;
+    }
+    console.log(this.sprite1);
+  }
 
-
+  public onClickImgOff():void {
+    this.imgsVisible = 'inline';
+    this.viewBigPhoto = 'none';
   }
 }

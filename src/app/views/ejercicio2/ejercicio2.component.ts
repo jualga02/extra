@@ -31,6 +31,10 @@ export class Ejercicio2Component {
     public getResponse(): void {
 
       this.service.getPokemon('Charmander').subscribe((response) => {
+          this.sprite1 = response.sprites.back_default;
+          this.sprite2 = response.sprites.back_shiny;
+          this.sprite3 = response.sprites.front_default;
+          this.sprite4 = response.sprites.front_shiny;
           this.pokemons.push(response);
           //console.log(this.pokemons[0].sprites.back_default);
       });
@@ -44,14 +48,6 @@ export class Ejercicio2Component {
           this.pokemons.push(response);
           //console.log(this.pokemons[2]);
       }); 
-
-      this.sprite1 = <string>this.pokemons[0].sprites.back_default;
-      this.sprite2 = <string>this.pokemons[0].sprites.back_shiny;
-      this.sprite3 = <string>this.pokemons[0].sprites.front_default;
-      this.sprite4 = <string>this.pokemons[0].sprites.front_shiny;
-
-      console.log(this.sprite4);
-      
       
     }
 
